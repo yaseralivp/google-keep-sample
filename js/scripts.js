@@ -127,7 +127,12 @@ function deleteNote(e) {
     var temp = getData('notes');
     var index = findItemIndex(e.parentElement.id, temp);
     temp.splice(index, 1);
-    storeData('notes', temp);
+    if (temp.length > 0) {
+        storeData('notes', temp);
+    }
+    else {
+        localStorage.removeItem('notes');
+    }
 }
 
 function renderNotes() {
