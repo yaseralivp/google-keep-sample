@@ -132,10 +132,11 @@ function deleteNote(e) {
 
 function renderNotes() {
     var notes = getData('notes');
-    for (var i = 0; i < notes.length; i++) {
-        displayNote(notes[i]);
+    if (notes) {
+        for (var i = 0; i < notes.length; i++) {
+            displayNote(notes[i]);
+        }
     }
-
 }
 
 function handleBlur() {
