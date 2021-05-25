@@ -1,0 +1,29 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="icon" href="favicon.ico" />
+
+  <title>Google Keep: Keep your notes in one place</title>
+  <meta name="description" content="Keeps all your notes in an easy way">
+  <meta name="author" content="Yaser">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/styles.css">
+
+</head>
+
+<body onload="renderNotes()">
+  <form class="note-editor" id="note-editor">
+    <input id="title" placeholder="Title" type="text" />
+    <input id="text" placeholder="Take a note..." type="text" />
+    <input type="button" value="save" onclick="handleBlur()">
+  </form>
+  <div id="notes"></div>
+  <script src="js/scripts.js">
+  </script>
+</body>
+
+</html>
